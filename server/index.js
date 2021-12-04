@@ -1,15 +1,15 @@
 const express = require('express')
-
+const router = require('./router/')
+const bodyParser = require("body-parser");
 const app = express()
 const port = 3000
 
 
-//defining routes - $app ->get
-
-app.get('/', (request, response) => {
-    response.send('Hello World')
-})
+app.use(bodyParser.json());
+app.use(express.json())
 
 
-// starting the server on port 3000
+router(app)
+
+
 app.listen(port)
