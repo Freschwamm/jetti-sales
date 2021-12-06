@@ -23,21 +23,22 @@ const SalesData = () => {
 
     return (
         <div>
+            <header className={"salesTitles"}>Jetti Sales Information</header>
             <div>
-                <table>
-                    <tr>
+                <table className={"tableStyle"}>
+                    <tr >
                         <th>Reference</th>
-                        <th>Status</th>
+                        <th>Order Status</th>
                         <th>Billing Full Name</th>
                         <th>Inventory Status</th>
                         <th>Tags</th>
                         <th>Created at</th>
                         <th>Payment Status</th>
-
+                        <th>Invoice Status</th>
                     </tr>
                 {allSales.map((sales, index) => {
                     return (
-                        <tr value={index}>
+                        <tr  value={index}>
                             <td>{sales.reference}</td>
                             <td>{sales.status}</td>
                             <td>{sales.billingFullName}</td>
@@ -45,6 +46,7 @@ const SalesData = () => {
                             <td>{sales.tags}</td>
                             <td>{sales.createdAt}</td>
                             <td>{sales.paymentStatus}</td>
+                            <td>{sales.invoiceStatus}</td>
                         </tr>
 
                     )
