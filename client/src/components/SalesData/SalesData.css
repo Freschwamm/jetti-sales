@@ -1,0 +1,22 @@
+.tableStyle {
+    align-content: center;
+    border: 5px solid #000000;
+    margin: 10vh;
+    padding: 10px;
+}
+
+th {
+    border-bottom: 2px solid #000000;
+    padding: 10px;
+}
+
+td {
+    padding: 3px;
+    border: .25px solid #D3D3D3FF;
+}
+
+.salesTitles {
+    padding-top: 40px;
+    font-size: 30px;
+}
+
