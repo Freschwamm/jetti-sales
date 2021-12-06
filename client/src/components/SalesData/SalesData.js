@@ -1,11 +1,10 @@
 import React, {useState, useEffect} from "react";
-
+import "./SalesData.css"
 
 const SalesData = () => {
 
 
     const [allSales, setAllSales] = useState([]);
-
 
 
     const jettiSales = async () => {
@@ -19,16 +18,39 @@ const SalesData = () => {
     }, [])
 
 
-console.log(allSales[0])
+    console.log(allSales[0])
 
 
     return (
         <div>
-            {allSales.map((sales, index) => {
-                return (
-                    <option value={index}>{sales.reference}</option>
-                )
-            })}
+            <div>
+                <table>
+                    <tr>
+                        <th>Reference</th>
+                        <th>Status</th>
+                        <th>Billing Full Name</th>
+                        <th>Inventory Status</th>
+                        <th>Tags</th>
+                        <th>Created at</th>
+                        <th>Payment Status</th>
+
+                    </tr>
+                {allSales.map((sales, index) => {
+                    return (
+                        <tr value={index}>
+                            <td>{sales.reference}</td>
+                            <td>{sales.status}</td>
+                            <td>{sales.billingFullName}</td>
+                            <td>{sales.inventoryStatus}</td>
+                            <td>{sales.tags}</td>
+                            <td>{sales.createdAt}</td>
+                            <td>{sales.paymentStatus}</td>
+                        </tr>
+
+                    )
+                })}
+                </table>
+            </div>
         </div>
     );
 }
