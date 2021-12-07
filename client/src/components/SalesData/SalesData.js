@@ -18,15 +18,12 @@ const SalesData = () => {
     }, [])
 
 
-    console.log(allSales)
-
-
     return (
         <div>
             <header className={"salesTitles"}>Jetti Sales Information</header>
             <div>
                 <table className={"tableStyle"}>
-                    <tr >
+                    <tr>
                         <th>Reference</th>
                         <th>Order Status</th>
                         <th>Billing Full Name</th>
@@ -36,21 +33,21 @@ const SalesData = () => {
                         <th>Payment Status</th>
                         <th>Invoice Status</th>
                     </tr>
-                {allSales.map((sales, index) => {
-                    return (
-                        <tr  value={index}>
-                            <td>{sales.reference}</td>
-                            <td>{sales.status}</td>
-                            <td>{sales.billingFullName}</td>
-                            <td>{sales.inventoryStatus}</td>
-                            <td>{sales.tags}</td>
-                            <td>{sales.createdAt}</td>
-                            <td>{sales.paymentStatus}</td>
-                            <td>{sales.invoiceStatus}</td>
-                        </tr>
+                    {allSales.map((sales, index) => {
+                        return (
+                            <tr value={index}>
+                                <td>{sales.reference}</td>
+                                <td>{sales.status}</td>
+                                <td>{sales.billingFullName}</td>
+                                <td>{sales.inventoryStatus}</td>
+                                <td>{sales.tags}</td>
+                                <td>{sales.createdAt}</td>
+                                <td>{sales.paymentStatus}</td>
+                                <td>{sales.invoiceStatus}</td>
+                            </tr>
 
-                    )
-                })}
+                        )
+                    })}
                 </table>
             </div>
         </div>
