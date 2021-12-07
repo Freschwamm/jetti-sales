@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "axios": "^0.24.0"
+  },
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --coverage",
+    "start": "node <name_of_mainjs_file>"
+  }
+}
