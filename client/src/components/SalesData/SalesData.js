@@ -18,7 +18,7 @@ const SalesData = () => {
     }, [])
 
 
-    console.log(allSales[0])
+    console.log(allSales)
 
 
     return (
